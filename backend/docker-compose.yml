@@ -1,0 +1,12 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  web:
+    build: ./flask
+    ports:
+      - "5000:5000"
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
